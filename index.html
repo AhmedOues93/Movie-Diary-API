@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Diary</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full bg-blue-50 p-2 sticky top-0 z-100 ">
+<header class="bg-sky-900 p-10 text-white">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    
+    <!-- Title on the left -->
+    <h1 class="text-6xl font-bold">Movie Diary</h1>
+
+    <!-- Nav menu on the right -->
+    <nav>
+      <ul class="flex gap-6 text-lg">
+        <li><a href="index.html" class=" text-l hover:text-red-400">Homepage</a></li>
+        <li><a href="journal.html" class=" text-l  color hover:text-red-400">Journal</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+
+  
+</header>
+<div class=" bg-blue- flex  justify-center  p-2 ">
+<input  id="search-input" class="  font-bold bg-white xl w-72 px-4 py-2 border-2 border-gray-700 rounded-l-md focus:outline-none focus:border-blus-600" type="text" placeholder="Search your Movies">
+
+<button  id="btn-search" class="  text-xl font-bold   w-30 bg-blue-600 text-white font-semibold rounded-r-md hover:bg-blue-600 "> Search</button>
+</div>
+ <div class="container-movie">
+<!-- movie from API  -->
+ </div>
+<script src="main.js"></script>
+</body>
