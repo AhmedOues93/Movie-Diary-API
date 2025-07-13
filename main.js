@@ -1,4 +1,6 @@
 console.log("helleo");
+
+
 const movieContainer = document.getElementById("movie-container");
 
 //  fetch API link 
@@ -61,7 +63,7 @@ function displayMovie(movie) {
   movieContainer.appendChild(movieCard);
 }
 
-// ✅ تعريف الفنكشن الصحيح و خارج displayMovie
+
 function favoriteListe(movie) {
   let favorit = JSON.parse(localStorage.getItem("favorit")) || [];
 
@@ -76,6 +78,50 @@ function favoriteListe(movie) {
   }
 }
 
+ // change the title H1 :
+ const link = document.createElement("link");
+link.href = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+link.rel = "stylesheet";
+document.head.appendChild(link);
+
+ const titlePage = document.querySelector("h1");
+  titlePage.style.fontFamily = "'Roboto', sans-serif";
+
+
+//creat footer
+
+
+const footer = document.createElement("footer");
+footer.className = "bg-sky-900 p-6 mt-8 text-white text-center font-bold text-lg flex flex-col items-center";
+
+// Text copyright
+const copyright = document.createElement("p");
+copyright.textContent = "© 2025 Ahmed Oueslati";
+footer.appendChild(copyright);
+
+// Container for icons
+const accountLinks = document.createElement("div");
+accountLinks.className = "mt-3 flex gap-6";
+
+// GitHub icon link
+const githubLink = document.createElement("a");
+githubLink.href = "https://github.com/AhmedOues93";
+githubLink.target = "_blank";
+githubLink.innerHTML = '<i class="fab fa-github fa-2x hover:text-gray-400"></i>';
+
+// LinkedIn icon link
+const linkedinLink = document.createElement("a");
+linkedinLink.href = "https://www.linkedin.com/in/ahmed-oueslati-b36078373";
+linkedinLink.target = "_blank";
+linkedinLink.innerHTML = '<i class="fab fa-linkedin fa-2x hover:text-blue-400"></i>';
+
+// Append links
+accountLinks.appendChild(githubLink);
+accountLinks.appendChild(linkedinLink);
+footer.appendChild(accountLinks);
+
+// Add footer to page
+document.body.appendChild(footer);
 
 
 
